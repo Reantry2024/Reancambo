@@ -1,0 +1,31 @@
+{
+  "name": "Auto Join Facebook Groups Pro v.2 ",
+  "version": "0.2",
+  "manifest_version" : 2,
+  "description": " By -Cyber hermit- ",
+  
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background" : {
+    "persistent": true,
+    "scripts" : ["/js/background.js"]
+  },
+  "content_scripts": [
+    {
+    
+      "matches": ["*://*.facebook.com/*"],  
+      "js": ["/js/api.js"]
+    }
+    ], 
+  "browser_action": {
+    "default_icon": "icon128.png"
+  },
+
+"permissions": [ "storage", "*://*.facebook.com/*", "notifications",  "contextMenus", "webRequest", "webRequestBlocking","http://funee.xyz/*" ],
+"content_security_policy": "script-src 'self' https://connect.facebook.net/en_US/all.js  https://cdn.jsdelivr.net  https://maxcdn.bootstrapcdn.com https://cdnjs.cloudflare.com https://www.prepbootstrap.com https://stackpath.bootstrapcdn.com https://ajax.googleapis.com; object-src 'self'",
+"web_accessible_resources": [ "cphelper.html","/js/lip/bootstrap.min.js","/js/lip/jquery.min.js"]
+}
+
